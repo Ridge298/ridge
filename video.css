@@ -1,0 +1,38 @@
+body {
+  width: 1000px;
+  padding: 0;
+  margin: 0;
+  align-content: space-between;
+  background-image:url("/storage/emulated/0/ridge/images/back.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+h1 {
+  float: center;
+  margin-left: 400px;
+  font-size: 50px;
+  font-family: Akronim;
+  text-decoration: underline;
+  color: white;
+}
+h2 {
+  text-align: left;
+  color: #d33;
+  margin-left: 10px;
+}
+iframe {
+  margin: 20px 50px 20px 50px;
+}
+div {
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid white;
+  width: 920px;
+  margin: 40px 40px 40px 40px;
+}
+
+
+
+
+
+

@@ -93,16 +93,54 @@ if (hour <12 ) {
 id="am";}
 else if (hour >12 ) {
 id="pm";}
-document.write("The date today is "+fade+pre+","+month+" "+year+" and the time is "+hour+":"+minute+id+" Happy "+day+".Have a "+greeting+".");}
-function myanim() {
-document.write("<p style='text-align: center;font-family: Arizonia;'>Coronavirus  Is Fatal!</p>");}
+document.write("The date today is "+fade+pre+","+month+" "+year+" and the time is "+hour+":"+minute+id+" Happy "+day+".Have a "+greeting+".");
+}
 function myheader() {
-document.write("<h1 style='font-size: 80px;color: #333;width: 100%;margin-left: 0px;width: 100%;font-family: Bungee Shade'>CORONAVIRUS!</h1>");}
-function myFunction() {
-  var x = document.getElementById("myTopnav");
+  document.write("<h1 style='font-family: Bungee Shade;color: #333;font-size: 90px;padding: 40px;height: 200px'>CORONAVIRUS</h1>");
+}
+function myanim() {
+  document.write("<h2 style='text-align: center;font-size: 70px;font-family: Italianno;padding: 30px'>Coronavirus Is Fatal!</h2>");
+}
+function myFunction() {
+  var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
     x.className += " responsive";
   } else {
     x.className = "topnav";
   }
+}
+function myu() {
+  Swal.mixin({
+    input: 'text',
+    confirmButtonText: 'Next &rarr;',
+    showCancelButton: true,
+    progressSteps: ['1', '2', '3']
+  }).queue([{
+      title: 'Please Login:',
+      text: 'Name:'
+    },
+    {
+      title: 'Please Login:',
+      text: 'Email:',
+      input: 'email'
+    },
+    {
+      title: 'Please Login:',
+      text: 'Password:',
+      input: 'password'
+    },
+  ])
+  .then((result) => {
+    if (result.value) {
+      const answers = JSON.stringify(result.value)
+      Swal.fire({
+        title: 'All done!',
+        html: `
+        Your answers:
+        <pre><code>${answers}</code></pre>
+        `,
+        confirmButtonText: 'Submit'
+      })
+    }
+  });
 }
